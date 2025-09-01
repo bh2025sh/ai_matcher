@@ -23,7 +23,7 @@ The system then matches candidates with jobs using AI/ML logic.
 - **Tools:** Postman for API testing
 
 
-🚀 Steps to Run the Project
+## 🚀 Steps to Run the Project
 
 1. Clone the Project
 git clone https://github.com/bh2025sh/ai_matcher.git
@@ -59,3 +59,10 @@ python manage.py runserver
 
 The server will start at:
  http://127.0.0.1:8000
+
+ ## API Testing with Postman
+- Project contain a file `ai_matcher.postman_collection.json`
+- Import this file in Postman:
+  1. Open Postman → File → Import
+  2. Select ``ai_matcher.postman_collection.json`
+  3. Set `admin_token` and `cand_token` in Environment

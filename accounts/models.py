@@ -8,6 +8,11 @@ class User(AbstractUser):
 
     role = models.CharField(max_length=20, choices=Role.choices, default=Role.CANDIDATE)
 
+    def save(self, *args, **kwargs):
+        if self.is_superuser:  
+            self.role = self.Role.ADMIN
+        super().save(*args, **kwargs)
+
 class CandidateProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
     full_name = models.CharField(max_length=255, blank=True)

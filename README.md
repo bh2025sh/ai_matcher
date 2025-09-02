@@ -1,4 +1,4 @@
-# AI Matcher
+# AI Matcher using Jaccard Index
 
 AI Matcher is a job and candidate matching system built with **Django REST Framework**.  
 It allows HRs to post jobs and candidates to register with their skills, experience, and resumes.  
